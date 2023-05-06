@@ -8,7 +8,7 @@
 import Foundation
 
 struct UserRegistration: Codable {
-    let id: UUID = UUID()
+    var id: UUID = UUID()
     var email: String
     var username: String
     var password: String

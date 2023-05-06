@@ -9,11 +9,12 @@ import SwiftUI
 
 struct SignUpView: View {
     
-    @State private var email = ""
-    @State private var username = ""
-    @State private var password = ""
     @State private var passwordCheck = ""
     @State private var buttonText = "Sign up"
+    
+    @StateObject var signUpManager: SignUpManager = .init()
+    
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         NavigationView {
@@ -32,35 +33,44 @@ struct SignUpView: View {
                         .shadow(color: Color.customShadow, radius: 1)
                         InputField(
                             isSecureField: false, isEmailType: true,
-                            placeholder: "Email", inputData: $email
+                            placeholder: "Email", inputData:
+                                $signUpManager.userRegistration.email
                         )
                         InputField(
                             isSecureField: false, isEmailType: false,
-                            placeholder: "Username", inputData: $username
+                            placeholder: "Username", inputData: $signUpManager.userRegistration.username
                         )
                         InputField(
                             isSecureField: true, isEmailType: false,
-                            placeholder: "Password", inputData: $password
+                            placeholder: "Password", inputData: $signUpManager.userRegistration.password
                         )
                         InputField(
                             isSecureField: true, isEmailType: false,
                             placeholder: "Password check", inputData: $passwordCheck
                         )
                         HStack {
-                            Text("* Error Message")
-                                .font(.caption)
-                                .foregroundColor(.red)
+                            if signUpManager.showWarnning {
+                                Text("* \(signUpManager.message)")
+                                    .font(.caption)
+                                    .foregroundColor(.red)
+                            }
+                            
                             Spacer()
                         }
                         SubmitButton(buttonText: $buttonText) {
-                            print(email)
-                            print(username)
-                            print(password)
-                            print(passwordCheck)
+                            if !signUpManager.isProgressing {
+                                signUpManager.signUp()
+                            }
                         }
                     }
                     .padding([.bottom, .horizontal])
                 }
+            }
+            .alert(isPresented: $signUpManager.showSignUpSucceedAlert) {
+                Alert(
+                    title: Text("Signed up successfully"),
+                    message: Text("Sign in on the sign in page"),
+                    dismissButton: .default(Text("OK"), action: { dismiss() }))
             }
         }
     }

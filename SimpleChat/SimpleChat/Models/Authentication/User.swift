@@ -14,5 +14,5 @@ struct User {
     var password: String
     var chatId: String
     var profileImageUrl: String
-    var friendsList: [UUID]
+    var friendsList: [String]
 }
