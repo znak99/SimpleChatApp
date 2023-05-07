@@ -11,3 +11,9 @@ struct SignUpResponse: Codable {
     let success: Bool
     let message: String
 }
+
+struct SignInResponse: Codable {
+    let success: Bool
+    let message: String
+    let userInfo: User?
+}

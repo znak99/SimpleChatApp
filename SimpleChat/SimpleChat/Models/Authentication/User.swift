@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct User {
-    let id: UUID
+struct User: Codable {
+    let id: Int
     var email: String
     var username: String
     var password: String

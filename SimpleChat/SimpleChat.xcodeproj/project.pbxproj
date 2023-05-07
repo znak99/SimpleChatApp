@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD04ECE12A074E46007A207A /* SignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD04ECE02A074E46007A207A /* SignInManager.swift */; };
 		BD1B82632A05F427009D4FDD /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B82622A05F427009D4FDD /* SignInView.swift */; };
 		BD1B82692A0605CB009D4FDD /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B82682A0605CB009D4FDD /* ColorExtension.swift */; };
 		BD1B826B2A061609009D4FDD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B826A2A061609009D4FDD /* SignUpView.swift */; };
@@ -14,17 +15,18 @@
 		BD1B82702A0644FD009D4FDD /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B826F2A0644FD009D4FDD /* ViewExtension.swift */; };
 		BD1B82722A0645D0009D4FDD /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B82712A0645D0009D4FDD /* SubmitButton.swift */; };
 		BD1B82762A0647D2009D4FDD /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B82752A0647D2009D4FDD /* ResetPasswordView.swift */; };
-		BD1B82782A064FE7009D4FDD /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B82772A064FE7009D4FDD /* UserRegistration.swift */; };
+		BD1B82782A064FE7009D4FDD /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B82772A064FE7009D4FDD /* Requests.swift */; };
 		BD1B827C2A0650B3009D4FDD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B827B2A0650B3009D4FDD /* User.swift */; };
 		BD1B82872A065339009D4FDD /* SignUpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B82862A065339009D4FDD /* SignUpManager.swift */; };
 		BD1B82892A0656E9009D4FDD /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B82882A0656E9009D4FDD /* Authenticator.swift */; };
-		BD1B828B2A065FFA009D4FDD /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B828A2A065FFA009D4FDD /* SignUpResponse.swift */; };
+		BD1B828B2A065FFA009D4FDD /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B828A2A065FFA009D4FDD /* Responses.swift */; };
 		BDB8B4CC2A055FEA00EA4670 /* SimpleChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB8B4CB2A055FEA00EA4670 /* SimpleChatApp.swift */; };
 		BDB8B4D02A055FEB00EA4670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB8B4CF2A055FEB00EA4670 /* Assets.xcassets */; };
 		BDB8B4D32A055FEB00EA4670 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB8B4D22A055FEB00EA4670 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD04ECE02A074E46007A207A /* SignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInManager.swift; sourceTree = "<group>"; };
 		BD1B82622A05F427009D4FDD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		BD1B82682A0605CB009D4FDD /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		BD1B826A2A061609009D4FDD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -32,11 +34,11 @@
 		BD1B826F2A0644FD009D4FDD /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		BD1B82712A0645D0009D4FDD /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		BD1B82752A0647D2009D4FDD /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
-		BD1B82772A064FE7009D4FDD /* UserRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
+		BD1B82772A064FE7009D4FDD /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		BD1B827B2A0650B3009D4FDD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BD1B82862A065339009D4FDD /* SignUpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpManager.swift; sourceTree = "<group>"; };
 		BD1B82882A0656E9009D4FDD /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
-		BD1B828A2A065FFA009D4FDD /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		BD1B828A2A065FFA009D4FDD /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
 		BDB8B4C82A055FEA00EA4670 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB8B4CB2A055FEA00EA4670 /* SimpleChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleChatApp.swift; sourceTree = "<group>"; };
 		BDB8B4CF2A055FEB00EA4670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,9 +76,9 @@
 		BD1B827A2A06509C009D4FDD /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				BD1B82772A064FE7009D4FDD /* UserRegistration.swift */,
 				BD1B827B2A0650B3009D4FDD /* User.swift */,
-				BD1B828A2A065FFA009D4FDD /* SignUpResponse.swift */,
+				BD1B82772A064FE7009D4FDD /* Requests.swift */,
+				BD1B828A2A065FFA009D4FDD /* Responses.swift */,
 				BD1B82882A0656E9009D4FDD /* Authenticator.swift */,
 			);
 			path = Authentication;
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				BD1B82862A065339009D4FDD /* SignUpManager.swift */,
+				BD04ECE02A074E46007A207A /* SignInManager.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -243,11 +246,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD1B82632A05F427009D4FDD /* SignInView.swift in Sources */,
-				BD1B82782A064FE7009D4FDD /* UserRegistration.swift in Sources */,
+				BD1B82782A064FE7009D4FDD /* Requests.swift in Sources */,
 				BD1B82872A065339009D4FDD /* SignUpManager.swift in Sources */,
+				BD04ECE12A074E46007A207A /* SignInManager.swift in Sources */,
 				BDB8B4CC2A055FEA00EA4670 /* SimpleChatApp.swift in Sources */,
 				BD1B82762A0647D2009D4FDD /* ResetPasswordView.swift in Sources */,
-				BD1B828B2A065FFA009D4FDD /* SignUpResponse.swift in Sources */,
+				BD1B828B2A065FFA009D4FDD /* Responses.swift in Sources */,
 				BD1B82892A0656E9009D4FDD /* Authenticator.swift in Sources */,
 				BD1B82702A0644FD009D4FDD /* ViewExtension.swift in Sources */,
 				BD1B82692A0605CB009D4FDD /* ColorExtension.swift in Sources */,

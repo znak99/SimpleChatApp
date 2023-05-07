@@ -13,6 +13,10 @@ struct SignInView: View {
     @State private var password = ""
     @State private var buttonText = "Sign in"
     
+    @StateObject var signInManager: SignInManager = .init()
+    
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -34,15 +38,15 @@ struct SignInView: View {
                         
                         InputField(
                             isSecureField: false, isEmailType: true,
-                            placeholder: "Email", inputData: $email
+                            placeholder: "Email", inputData: $signInManager.request.email
                         )
                         InputField(
                             isSecureField: true, isEmailType: false,
-                            placeholder: "Password", inputData: $password
+                            placeholder: "Password", inputData: $signInManager.request.password
                         )
                         
                         HStack {
-                            Text("* Error Message")
+                            Text("* \(signInManager.message)")
                                 .font(.caption)
                                 .foregroundColor(.red)
                             Spacer()
@@ -79,6 +83,11 @@ struct SignInView: View {
             }
             .navigationTitle("Sign in")
             .toolbar(.hidden)
+        }
+        .onReceive(signInManager.$isSignedIn) { succeed in
+            if succeed {
+                dismiss()
+            }
         }
     }
 }

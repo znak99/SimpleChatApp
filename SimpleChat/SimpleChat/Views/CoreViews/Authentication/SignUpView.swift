@@ -34,15 +34,15 @@ struct SignUpView: View {
                         InputField(
                             isSecureField: false, isEmailType: true,
                             placeholder: "Email", inputData:
-                                $signUpManager.userRegistration.email
+                                $signUpManager.request.email
                         )
                         InputField(
                             isSecureField: false, isEmailType: false,
-                            placeholder: "Username", inputData: $signUpManager.userRegistration.username
+                            placeholder: "Username", inputData: $signUpManager.request.username
                         )
                         InputField(
                             isSecureField: true, isEmailType: false,
-                            placeholder: "Password", inputData: $signUpManager.userRegistration.password
+                            placeholder: "Password", inputData: $signUpManager.request.password
                         )
                         InputField(
                             isSecureField: true, isEmailType: false,
@@ -58,9 +58,7 @@ struct SignUpView: View {
                             Spacer()
                         }
                         SubmitButton(buttonText: $buttonText) {
-                            if !signUpManager.isProgressing {
-                                signUpManager.signUp()
-                            }
+                            signUpManager.signUp()
                         }
                     }
                     .padding([.bottom, .horizontal])
