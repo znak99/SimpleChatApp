@@ -1,6 +1,7 @@
 package com.example.SampleChatApp.domain;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -18,6 +19,7 @@ public class User {
     @Column
     private String nickname;    // 닉네임
 
+    @Setter
     @Column
     private String password;    // 로그인 패스워드
 

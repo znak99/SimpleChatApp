@@ -39,7 +39,8 @@ public class SecurityConfiguration {
                 .antMatchers("/login/**").permitAll()
                 .antMatchers("/signup/**").permitAll()
                 .antMatchers("/api/login").permitAll()
-
+                .antMatchers("/api/checkMail").permitAll()
+                .antMatchers("/api/reset-password").permitAll()
                 //그 외 나머지는 로그인으로 인증을 받아야 이용가능
                 .anyRequest().authenticated()
 

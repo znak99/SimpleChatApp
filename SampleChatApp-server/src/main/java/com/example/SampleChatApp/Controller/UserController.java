@@ -1,18 +1,18 @@
 package com.example.SampleChatApp.Controller;
 
+import com.example.SampleChatApp.Dto.PasswordRequestDto;
 import com.example.SampleChatApp.Dto.SignupRequestDto;
 import com.example.SampleChatApp.Service.UserService;
+import com.example.SampleChatApp.mail.MailDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ObjectError;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -51,11 +51,15 @@ public class UserController {
 
     }
 
-    //패스워드 찾기
-    @GetMapping("/api/reset-password")
-    public String FindPassword(){
-        return null;
+    //패스워드 초기화를 위한 본인인증 - 메일
+    @GetMapping("/api/checkMail")
+    public int checkMail(@RequestBody MailDto mailDto) throws MessagingException {
+        return userService.checkMail(mailDto);
     }
 
-
+    //패스워드 초기화
+    @PatchMapping("/api/reset-password")
+    public String resetPassword(@RequestBody PasswordRequestDto passwordRequestDto){
+        return userService.resetPassword(passwordRequestDto);
+    }
 }
