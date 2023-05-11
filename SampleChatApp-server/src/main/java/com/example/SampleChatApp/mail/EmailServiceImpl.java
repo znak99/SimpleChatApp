@@ -1,5 +1,6 @@
 package com.example.SampleChatApp.mail;
 
+import com.example.SampleChatApp.Dto.MailDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;

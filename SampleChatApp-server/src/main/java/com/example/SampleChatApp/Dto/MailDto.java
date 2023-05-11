@@ -1,4 +1,4 @@
-package com.example.SampleChatApp.mail;
+package com.example.SampleChatApp.Dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

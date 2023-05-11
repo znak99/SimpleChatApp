@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Entity(name = "Users")
@@ -32,7 +33,13 @@ public class User {
     @Column
     private Id[] friendsList;   // 유저의 친구목록
 
-    public User(){}
+    @OneToMany
+    private List<Chatroom_user> chatroomUsers; // 채팅방 목록
+
+
+    public User(List<Chatroom_user> chatroomUsers){
+        this.chatroomUsers = chatroomUsers;
+    }
     public User(String email, String nickname, String password) {
         this.email=email;
         this.nickname=nickname;

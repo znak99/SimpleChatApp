@@ -5,7 +5,7 @@ import com.example.SampleChatApp.Dto.SignupRequestDto;
 import com.example.SampleChatApp.Repository.UserRepository;
 import com.example.SampleChatApp.domain.User;
 import com.example.SampleChatApp.mail.EmailServiceImpl;
-import com.example.SampleChatApp.mail.MailDto;
+import com.example.SampleChatApp.Dto.MailDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
